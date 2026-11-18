@@ -1,0 +1,19 @@
+name: LinVita C/C++
+
+# Keep the emulator, its tests and vendored runtime libraries in the scan.
+# Third-party test suites, examples and benchmarks are not part of LinVita.
+# Tracy's runtime client is under public/; the standalone profiler and CLI
+# programs below are not linked by external/CMakeLists.txt.
+paths-ignore:
+  - 'external/**/test/**'
+  - 'external/**/tests/**'
+  - 'external/**/example/**'
+  - 'external/**/examples/**'
+  - 'external/**/bench/**'
+  - 'external/**/benchmark/**'
+  - 'external/**/benchmarks/**'
+  - 'external/tracy/profiler/**'
+  - 'external/tracy/capture/**'
+  - 'external/tracy/csvexport/**'
+  - 'external/tracy/import/**'
+  - 'external/tracy/update/**'
